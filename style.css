@@ -4,15 +4,13 @@
 :root {
   --primary: #0d6e75;
   --secondary: #0a5a60;
-  --accent: #e9c46a; /* Jaune sable pour la lisibilité */
+  --accent: #e9c46a;
   --text: #2d3436;
   --light: #f4f9f9;
   --nav-h: 70px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -21,7 +19,7 @@ body {
   background: white;
 }
 
-h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
+h1, h2, .hero-quote { font-family: 'Playfair Display', serif; }
 
 /* NAVBAR */
 .navbar {
@@ -74,9 +72,8 @@ h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
 .hero-quote {
   font-style: italic;
   font-size: 1.5rem;
-  margin: 0 auto 2rem;
+  margin-bottom: 2rem;
   max-width: 800px;
-  white-space: normal;
 }
 
 .btn {
@@ -89,45 +86,6 @@ h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
   font-weight: 700;
   transition: 0.3s;
 }
-
-/* SECTIONS */
-.section { padding: 5rem 2rem; }
-.bg-light { background: var(--light); }
-.container { max-width: 1100px; margin: 0 auto; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-
-/* FIX LISIBILITÉ LIENS (CONTACT / MAIL / TEL) */
-a[href^="tel:"], 
-a[href^="mailto:"],
-.footer-inner a {
-  color: var(--accent) !important;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-a[href^="tel:"]:visited, 
-a[href^="mailto:"]:visited,
-.footer-inner a:visited {
-  color: var(--accent) !important; /* Reste jaune même si visité */
-}
-
-a[href^="tel:"]:hover, 
-a[href^="mailto:"]:hover,
-.footer-inner a:hover {
-  color: white !important;
-  text-decoration: underline;
-}
-
-/* FOOTER */
-.footer {
-  background: var(--secondary);
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.footer-inner { max-width: 800px; margin: 0 auto; }
 
 /* =========================================
    MOBILE - XIAOMI 14T PRO & ANDROID
@@ -142,7 +100,7 @@ a[href^="mailto:"]:hover,
 
   .hero-content h1 { font-size: 2.5rem; }
 
-  /* CITATION RÉGLÉE : NE SE COUPE PLUS */
+  /* CORRECTION CITATION COUPÉE */
   .hero-quote { 
     white-space: normal !important; 
     font-size: 1rem; 
@@ -153,14 +111,9 @@ a[href^="mailto:"]:hover,
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
-  /* MENU MOBILE OPAQUE & CLAIR */
-  .nav-toggle { 
-    display: block; 
-    background: none; 
-    border: none; 
-    cursor: pointer; 
-  }
-  .nav-toggle span { display: block; width: 25px; height: 3px; background: white; margin: 5px 0; }
+  /* MENU MOBILE OPAQUE */
+  .nav-toggle { display: block; background: none; border: none; cursor: pointer; }
+  .nav-toggle span { display: block; width: 25px; height: 3px; background: white; }
 
   .nav-links {
     position: fixed; 
@@ -168,11 +121,11 @@ a[href^="mailto:"]:hover,
     left: 0; 
     width: 100%;
     flex-direction: column; 
-    background: var(--secondary); 
+    background: var(--secondary); /* Fond bien opaque */
     max-height: 0; 
     overflow: hidden; 
     transition: 0.4s;
-    text-shadow: none;
+    text-align: center;
   }
 
   .nav-links.nav-open { 
@@ -183,5 +136,6 @@ a[href^="mailto:"]:hover,
 
   .nav-links a { font-size: 1.2rem; padding: 1rem; display: block; }
 
+  .container { padding: 0 1.5rem; }
   .grid { grid-template-columns: 1fr; gap: 2rem; }
 }
