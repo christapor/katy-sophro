@@ -223,3 +223,15 @@ body::before {
   
   .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
 }
+/* Modification de la couleur des liens de contact uniquement */
+footer a, a[href^="tel:"], a[href^="mailto:"] {
+  color: #e9c46a !important;
+  text-decoration: none !important;
+}
+
+/* Garde la couleur même après avoir cliqué */
+footer a:visited, a[href^="tel:"]:visited, a[href^="mailto:"]:visited {
+  color: #e9c46a !important;
+}
+
+
