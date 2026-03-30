@@ -1,6 +1,7 @@
 /* =========================================
-   REMISE À NEUF - KATY MIEUX-ETRE
+   STYLE OFFICIEL - KATY MIEUX-ETRE
    ========================================= */
+
 :root {
   --primary: #0d6e75;
   --secondary: #0a5a60;
@@ -10,6 +11,7 @@
   --nav-h: 70px;
 }
 
+/* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -31,6 +33,8 @@ h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
 }
 
 .nav-inner {
@@ -39,22 +43,23 @@ h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  width: 100%;
   padding: 0 2rem;
 }
 
-.logo img { height: 50px; }
+.logo img { height: 50px; display: block; }
 
 .nav-links { display: flex; list-style: none; gap: 2rem; }
 .nav-links a { 
   text-decoration: none; 
   color: white; 
   font-weight: 600; 
+  transition: 0.3s;
 }
 
 /* HERO SECTION */
 .hero {
-  min-height: 80vh;
+  min-height: 85vh;
   background: linear-gradient(rgba(13, 110, 117, 0.6), rgba(13, 110, 117, 0.6)), 
               url('image2.jpg') center/cover no-repeat;
   display: flex;
@@ -65,16 +70,17 @@ h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
   padding-top: var(--nav-h);
 }
 
-.hero-content { padding: 2rem; }
+.hero-content { padding: 2rem; width: 100%; }
 .hero-content h1 { font-size: 4rem; margin-bottom: 0.5rem; }
-.hero-subtitle { font-size: 1.2rem; letter-spacing: 3px; }
-.hero-category { color: var(--accent); font-weight: 700; margin: 1rem 0; }
+.hero-subtitle { font-size: 1.2rem; letter-spacing: 3px; font-weight: 300; text-transform: uppercase; }
+.hero-category { color: var(--accent); font-weight: 700; margin: 1rem 0; letter-spacing: 2px; }
 
 .hero-quote {
   font-style: italic;
   font-size: 1.5rem;
   margin: 0 auto 2rem;
   max-width: 800px;
+  line-height: 1.4;
 }
 
 .btn {
@@ -85,31 +91,44 @@ h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
+  transition: 0.3s;
 }
 
 /* SECTIONS & GRID */
 .section { padding: 5rem 2rem; }
 .bg-light { background: var(--light); }
 .container { max-width: 1100px; margin: 0 auto; }
+
 .grid { 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 3rem; 
 }
 
-/* FIX LISIBILITÉ LIENS */
+.content-block { padding: 1.5rem; }
+.accent-block { border-left: 4px solid var(--accent); background: #fdfdfd; }
+
+/* FIX LISIBILITÉ LIENS (CONTACT / MAIL / TEL) */
 a[href^="tel:"], 
 a[href^="mailto:"],
 .footer a {
   color: var(--accent) !important;
   text-decoration: none;
   font-weight: 700;
+  transition: 0.3s;
 }
 
 a[href^="tel:"]:visited, 
 a[href^="mailto:"]:visited,
 .footer a:visited {
   color: var(--accent) !important;
+}
+
+a[href^="tel:"]:hover, 
+a[href^="mailto:"]:hover,
+.footer a:hover {
+  color: white !important;
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -120,25 +139,54 @@ a[href^="mailto:"]:visited,
   text-align: center;
 }
 
-/* MOBILE - XIAOMI 14T PRO */
+/* =========================================
+   MOBILE - XIAOMI 14T PRO & ANDROID
+   ========================================= */
 @media (max-width: 767px) {
-  .hero-content h1 { font-size: 2.5rem; }
+  .hero { min-height: 50vh; }
   
+  .hero-content h1 { font-size: 2.5rem; }
+
   .hero-quote { 
     white-space: normal !important; 
     font-size: 1.1rem; 
+    line-height: 1.4;
+    margin: 0 auto 2.5rem;
     max-width: 90%;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
-  .nav-toggle { display: block; cursor: pointer; }
+  .nav-toggle { 
+    display: block; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 10px;
+  }
   .nav-toggle span { display: block; width: 25px; height: 3px; background: white; margin: 5px 0; }
 
   .nav-links {
-    position: fixed; top: var(--nav-h); left: 0; width: 100%;
-    flex-direction: column; background: var(--secondary);
-    max-height: 0; overflow: hidden; transition: 0.4s;
+    position: fixed; 
+    top: var(--nav-h); 
+    left: 0; 
+    width: 100%;
+    flex-direction: column; 
+    background: var(--secondary); 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: 0.4s;
+    text-align: center;
   }
 
-  .nav-links.nav-open { max-height: 500px; padding: 2rem 0; }
-  .nav-links a { display: block; padding: 1rem; }
+  .nav-links.nav-open { 
+    max-height: 500px; 
+    padding: 2rem 0; 
+    border-bottom: 3px solid var(--accent); 
+  }
+
+  .nav-links a { font-size: 1.2rem; padding: 1.2rem; display: block; }
+
+  .grid { grid-template-columns: 1fr; gap: 2rem; }
+  .section { padding: 3rem 1.5rem; }
 }
