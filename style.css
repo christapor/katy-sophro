@@ -1,43 +1,88 @@
-/* MOBILE - XIAOMI 14T PRO */
+:root {
+  --primary: #0d6e75;
+  --secondary: #0a5a60;
+  --accent: #e9c46a;
+  --text: #2d3436;
+  --light: #f4f9f9;
+  --nav-h: 70px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; color: var(--text); background: white; }
+h1, h2, h3, .hero-quote { font-family: 'Playfair Display', serif; }
+
+.navbar {
+  height: var(--nav-h);
+  background: var(--primary);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.logo img { height: 45px; }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: white; font-weight: 600; }
+
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(rgba(13,110,117,0.6), rgba(13,110,117,0.6)), url('image2.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: var(--nav-h);
+}
+
+.hero-content h1 { font-size: 3.5rem; }
+.hero-quote { font-style: italic; font-size: 1.4rem; margin: 1.5rem auto; max-width: 700px; }
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--accent);
+  color: var(--secondary);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.section { padding: 4rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
+/* FIX LIENS VISIBLES */
+a[href^="tel:"], a[href^="mailto:"], .footer a {
+  color: var(--accent) !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+a[href^="tel:"]:visited, a[href^="mailto:"]:visited { color: var(--accent) !important; }
+
+.footer { background: var(--secondary); color: white; padding: 3rem 2rem; text-align: center; }
+
 @media (max-width: 767px) {
-  .hero { min-height: 45vh; }
-  
-  .hero-content { 
-    padding-top: 6rem; 
-    text-align: center; 
-    min-height: calc(45vh - var(--nav-h));
-  }
-
-  /* RE-AJOUT DE LA CITATION POUR MOBILE */
-  .hero-quote { 
-    white-space: normal !important; /* Permet le retour à la ligne */
-    font-size: 0.95rem; 
-    line-height: 1.5;
-    margin: 0 auto 2.5rem;
-    max-width: 90%; /* Pour laisser une petite marge sur les côtés */
-    display: block;
-  }
-
-  .nav-toggle { display: block; }
-  
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-quote { white-space: normal !important; font-size: 1rem; padding: 0 1rem; }
+  .nav-toggle { display: block; cursor: pointer; }
+  .nav-toggle span { display: block; width: 25px; height: 3px; background: white; margin: 5px 0; }
   .nav-links {
     position: fixed; top: var(--nav-h); left: 0; width: 100%;
-    flex-direction: column; background: #0a5a60;
+    flex-direction: column; background: var(--secondary);
     max-height: 0; overflow: hidden; transition: 0.4s;
-    text-shadow: none;
   }
-  
-  .nav-links.nav-open { max-height: 350px; padding: 2rem; border-bottom: 3px solid var(--accent); }
-  
-  .nav-links a { 
-    color: white !important; 
-    font-size: 1.3rem; 
-    padding: 0.8rem 0; 
-    display: block; 
-  }
-  
-  .cards { gap: 1.5rem; } 
-  .card { padding: 1.8rem; }
-  
-  .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+  .nav-links.nav-open { max-height: 400px; padding: 1rem 0; }
+  .nav-links a { padding: 1rem; display: block; }
 }
