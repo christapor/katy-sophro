@@ -19,13 +19,13 @@
   <meta name="theme-color" content="#0d6e75">
 
   <style>
-    /* Correction du bug d'affichage du bouton (carte jaune) */
+    /* Correction de la zone Hero pour réduire l'espace excessif */
     .hero {
-      min-height: 100vh; /* S'assure que le hero prend au moins tout l'écran */
+      min-height: 60vh; /* Hauteur réduite (au lieu de 100vh) */
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 0; /* Ajoute de l'espace en haut et en bas pour ne rien couper */
+      padding: 60px 0 30px 0; /* Réduction du padding en bas (30px) */
     }
 
     .hero-content {
@@ -39,50 +39,51 @@
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      margin-bottom: 0.5rem;
+      font-size: clamp(2.2rem, 7vw, 4rem); /* Taille légèrement réduite */
+      margin-bottom: 0.3rem;
     }
 
     .hero-subtitle {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 5.5vw, 2.8rem);
+      font-size: clamp(1.3rem, 5vw, 2.5rem);
       white-space: nowrap; 
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .hero-certified {
-      font-size: clamp(0.9rem, 3.5vw, 1.4rem);
+      font-size: clamp(0.85rem, 3vw, 1.2rem);
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-quote {
       font-style: italic;
-      margin-bottom: 2.5rem; /* Augmente l'espace avant le bouton */
+      margin-bottom: 1.5rem; /* Espace réduit avant le bouton */
       max-width: 600px;
+      font-size: 0.95rem;
     }
 
-    /* Style du bouton "carte jaune" pour qu'il soit bien visible */
     .btn-primary {
       display: inline-block;
-      padding: 15px 30px;
-      background-color: #f4a124; /* Le jaune Tapor/Katy */
+      padding: 12px 25px; /* Bouton légèrement plus compact */
+      background-color: #f4a124;
       color: #ffffff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 700;
       transition: transform 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
+    /* Réduction de l'espace en haut de la section suivante */
+    .section-sophro {
+      padding-top: 40px !important;
     }
 
     .card-title {
-      font-size: 1.5rem; 
+      font-size: 1.4rem; 
       font-family: 'Playfair Display', serif; 
       font-weight: 700; 
       color: var(--primary); 
