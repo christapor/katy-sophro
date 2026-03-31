@@ -19,40 +19,66 @@
   <meta name="theme-color" content="#0d6e75">
 
   <style>
-    /* Styles spécifiques pour le Hero et le centrage */
+    /* Correction du bug d'affichage du bouton (carte jaune) */
+    .hero {
+      min-height: 100vh; /* S'assure que le hero prend au moins tout l'écran */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 0; /* Ajoute de l'espace en haut et en bas pour ne rien couper */
+    }
+
     .hero-content {
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
     }
 
     .hero-title {
       font-size: clamp(2.5rem, 8vw, 4.5rem);
       margin-bottom: 0.5rem;
-      text-align: center;
     }
 
     .hero-subtitle {
       font-family: 'Playfair Display', serif;
-      /* Force une seule ligne et adapte la taille */
       font-size: clamp(1.4rem, 5.5vw, 2.8rem);
       white-space: nowrap; 
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 1rem;
-      text-align: center;
     }
 
     .hero-certified {
-      /* Adapte la taille pour que "Boisset (43)" ne disparaisse pas sur mobile */
       font-size: clamp(0.9rem, 3.5vw, 1.4rem);
       font-weight: 600;
       margin-bottom: 1.5rem;
-      text-align: center;
-      width: 100%;
+    }
+
+    .hero-quote {
+      font-style: italic;
+      margin-bottom: 2.5rem; /* Augmente l'espace avant le bouton */
+      max-width: 600px;
+    }
+
+    /* Style du bouton "carte jaune" pour qu'il soit bien visible */
+    .btn-primary {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #f4a124; /* Le jaune Tapor/Katy */
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
     }
 
     .card-title {
