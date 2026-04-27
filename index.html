@@ -4,46 +4,41 @@
   <meta charset="UTF-8">
   <title>Sophrologue à Boisset en Haute-Loire | Stress, sommeil, confiance en soi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="description" content="Katy Lengrand, sophrologue certifiée RNCP à Boisset en Haute-Loire. Séances de sophrologie pour stress, sommeil, émotions, confiance en soi, examens et mieux-être.">
-
   <meta name="keywords" content="sophrologue Boisset, sophrologie Boisset, sophrologue Haute-Loire, sophrologie Haute-Loire, gestion du stress, sommeil, confiance en soi, émotions, préparation examens, sophrologue Retournac, sophrologue Craponne-sur-Arzon, sophrologue Usson-en-Forez, massages énergétiques, Katy Lengrand">
-
+  
   <link rel="stylesheet" href="style.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0d6e75">
 
   <style>
-    .hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 60px 0 30px 0; }
+    /* Correction pour le mode paysage et les petits écrans */
+    .hero { 
+      min-height: 60vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 80px 0 40px 0; /* Padding augmenté pour éviter le chevauchement */
+    }
+    @media (max-height: 500px) {
+      .hero { min-height: auto; padding: 100px 0 50px 0; }
+      .hero-title { font-size: 1.8rem !important; }
+    }
     .hero-content { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90%; margin: 0 auto; }
-    .hero-title { font-size: clamp(2.2rem, 7vw, 4rem); margin-bottom: 0.3rem; }
+    .hero-title { font-size: clamp(1.8rem, 6vw, 3.5rem); margin-bottom: 0.3rem; }
     .hero-subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 5vw, 2.5rem); white-space: nowrap; font-weight: 700; color: #ffffff; margin-bottom: 0.8rem; }
     .hero-certified { font-size: clamp(0.85rem, 3vw, 1.2rem); font-weight: 600; margin-bottom: 1.2rem; }
-    .hero-quote { font-style: italic; margin-bottom: 1.5rem; max-width: 600px; font-size: 0.95rem; }
     .btn-primary { display: inline-block; padding: 12px 25px; background-color: #f4a124; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; transition: transform 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     .section-sophro { padding-top: 40px !important; }
     .card-title { font-size: 1.4rem; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; text-align: center; }
   </style>
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.katymieuxetre.fr/">
-  <meta property="og:title" content="Sophrologue à Boisset en Haute-Loire | Katy Lengrand">
-  <meta property="og:description" content="Séances de sophrologie à Boisset pour la gestion du stress, le sommeil, les émotions, la confiance en soi et le mieux-être.">
-  <meta property="og:image" content="https://www.katymieuxetre.fr/og-image.jpg">
-
-  <link rel="canonical" href="https://www.katymieuxetre.fr/">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Katy Lengrand - Sophrologue à Boisset",
-    "description": "Katy Lengrand, sophrologue certifiée RNCP à Boisset. Accompagnement en gestion du stress, sommeil, émotions et confiance en soi. Séances à Boisset, Retournac, Craponne-sur-Arzon et Usson-en-Forez.",
+    "description": "Katy Lengrand, sophrologue certifiée RNCP à Boisset. Accompagnement en gestion du stress, sommeil, émotions et confiance en soi.",
     "url": "https://www.katymieuxetre.fr/",
     "telephone": "+33684681187",
     "address": {
@@ -53,11 +48,6 @@
       "postalCode": "43500",
       "addressRegion": "Auvergne-Rhône-Alpes",
       "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 45.3238,
-      "longitude": 3.9829
     },
     "areaServed": [
       {"@type": "City", "name": "Boisset"},
@@ -76,7 +66,6 @@
       <ul class="nav-links">
         <li><a href="#sophrologie">Sophrologie</a></li>
         <li><a href="#prestations">Prestations</a></li>
-        <!-- <li><a href="#avis">Avis</a></li> -->
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -88,7 +77,6 @@
         <h1 class="hero-title">Sophrologue à Boisset en Haute-Loire</h1>
         <p class="hero-subtitle">Katy Lengrand</p>
         <p class="hero-certified">Sophrologie certifiée RNCP pour stress, sommeil, émotions et confiance en soi</p>
-        <p class="hero-quote">&laquo;&nbsp;J'écoute les murmures de mon corps avant d'en entendre les cris&nbsp;&raquo;</p>
         <a href="#prestations" class="btn btn-primary">Découvrir les séances</a>
       </div>
     </div>
@@ -99,25 +87,23 @@
       <div class="container sophro-grid">
         <div>
           <h2>Séance de sophrologie à Boisset, Retournac, Craponne-sur-Arzon et Usson-en-Forez</h2>
-          <p>La sophrologie est une méthode psycho-corporelle qui associe respiration, détente musculaire et visualisation positive. Elle aide à mieux gérer le stress, améliorer le sommeil, renforcer la confiance en soi et retrouver un équilibre durable.</p>
-          <p>Installée à Boisset, en Haute-Loire, Katy Lengrand accompagne les adultes, les adolescents et les enfants dès 5 ans. Les séances s’adressent aux personnes de Boisset et des communes voisines comme Retournac, Craponne-sur-Arzon, Usson-en-Forez et les alentours.</p>
+          <p>La sophrologie est une méthode psycho-corporelle qui associe respiration, détente musculaire et visualisation positive. Elle aide à mieux gérer le stress, améliorer le sommeil et retrouver un équilibre durable.</p>
+          <p>Installée à Boisset, Katy Lengrand accompagne les adultes, les adolescents et les enfants dès 5 ans à domicile ou en cabinet.</p>
         </div>
         <div>
-          <h3>Accompagnement stress, émotions et anxiété</h3>
+          <h3>Accompagnement stress et émotions</h3>
           <ul class="bullet-list">
-            <li>Apprendre à mieux gérer le stress au quotidien</li>
-            <li>Accueillir et réguler les émotions</li>
-            <li>Retrouver calme, serrénité et confiance en soi</li>
-            <li>Préparer un examen, un changement ou une étape de vie</li>
+            <li>Mieux gérer le stress au quotidien</li>
+            <li>Retrouver calme et confiance en soi</li>
+            <li>Préparer un examen ou une étape de vie</li>
           </ul>
         </div>
         <div>
-          <h3>Sophrologie pour le sommeil et la détente corporelle</h3>
+          <h3>Sommeil et détente corporelle</h3>
           <ul class="bullet-list">
             <li>Améliorer la qualité du sommeil</li>
-            <li>Relâcher les douleurs et tensions corporelles</li>
-            <li>Séances individuelles en cabinet à Boisset</li>
-            <li>Séances à domicile autour de Retournac, Craponne-sur-Arzon et Usson-en-Forez</li>
+            <li>Relâcher les tensions corporelles</li>
+            <li>Séances à Boisset et communes voisines</li>
           </ul>
         </div>
       </div>
@@ -125,67 +111,26 @@
 
     <section id="prestations" class="section section-prestations">
       <div class="container">
-        <h2>Séance de sophrologie, accompagnement stress et massages bien-être en Haute-Loire</h2>
+        <h2>Séance de sophrologie, accompagnement stress et massages bien-être</h2>
         <div class="cards">
           <article class="card">
-            <p class="card-title">Sophrologie individuelle en cabinet</p>
-            <p class="card-subtitle">À Boisset</p>
+            <p class="card-title">Séance individuelle</p>
+            <p class="card-subtitle">En cabinet à Boisset</p>
             <div class="card-tarif"><span class="tarif-label">Adulte</span><span class="card-price">60€</span></div>
-            <div class="card-tarif"><span class="tarif-label">Enfant / Ado (-16 ans)</span><span class="card-price">45€</span></div>
           </article>
           <article class="card">
-            <p class="card-title">Sophrologie à domicile</p>
-            <div class="card-tarif"><span class="tarif-label">Adulte</span><span class="card-price">70€</span></div>
-            <div class="card-tarif"><span class="tarif-label">Enfant / Ado (-16 ans)</span><span class="card-price">55€</span></div>
-          </article>
-          <article class="card">
-            <p class="card-title">Ateliers de sophrologie en groupe</p>
-            <p class="card-price">12€ / pers</p>
-            <p>Des séances collectives pour découvrir la sophrologie et partager un moment de mieux-être.</p>
-          </article>
-          <article class="card">
-            <p class="card-title">Massages relaxants et énergétiques</p>
-            <p class="card-price">Sur mesure</p>
-            <p>Des massages intuitifs adaptés à vos besoins pour favoriser le lâcher-prise.</p>
+            <p class="card-title">À domicile</p>
+            <div class="card-tarif"><span class="tarif-label">Secteur Retournac / Usson</span><span class="card-price">+10€</span></div>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- 
-    <section id="avis" class="section section-avis">
-      <div class="container">
-        <h2>Avis et témoignages sur les séances de sophrologie</h2>
-        <div class="cards">
-          <article class="card">
-            <p class="card-title">Gestion du stress</p>
-            <p>« Les séances m’ont aidée à mieux respirer et à retrouver du calme dans mon quotidien. »</p>
-            <p><strong>— Témoignage à remplacer</strong></p>
-          </article>
-          <article class="card">
-            <p class="card-title">Sommeil et détente</p>
-            <p>« Grâce aux exercices de sophrologie, j’ai appris à relâcher les tensions et à mieux dormir. »</p>
-            <p><strong>— Témoignage à remplacer</strong></p>
-          </article>
-          <article class="card">
-            <p class="card-title">Confiance en soi</p>
-            <p>« Un accompagnement doux et bienveillant qui m’a permis de reprendre confiance. »</p>
-            <p><strong>— Témoignage à remplacer</strong></p>
-          </article>
-        </div>
-      </div>
-    </section>
-    -->
 
     <section id="contact" class="section section-contact">
-      <div class="container contact-grid">
-        <div>
-          <h2>Prendre rendez-vous avec votre sophrologue à Boisset</h2>
-          <p><strong>Adresse :</strong> 5 Montée du Suc, 43500 Boisset</p>
-          <p>Katy Lengrand vous accueille à Boisset et intervient également vers Retournac, Craponne-sur-Arzon, Usson-en-Forez et les communes proches en Haute-Loire.</p>
-          <p>Téléphone : <a href="tel:0684681187">06 84 68 11 87</a></p>
-          <p>Email : <a href="mailto:katylengrand@gmail.com">katylengrand@gmail.com</a></p>
-        </div>
+      <div class="container">
+        <h2>Prendre rendez-vous</h2>
+        <p><strong>Adresse :</strong> 5 Montée du Suc, 43500 Boisset</p>
+        <p>Téléphone : <a href="tel:0684681187">06 84 68 11 87</a></p>
       </div>
     </section>
   </main>
@@ -193,12 +138,11 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span>
-        <a href="mailto:christapor@gmail.com?subject=Demande via site Katy" target="_blank" rel="noopener noreferrer" class="tapor-link">
-          <span style="color:#ffffff;font-weight:700;">Tapor</span><span style="color:#e63946;font-weight:700;">Di</span><span style="color:#4a90d9;font-weight:700;">gi</span><span style="color:#f4a124;font-weight:700;">tal</span>
-          <img src="logo.png" alt="Logo TaporDigital, création du site internet de Katy Lengrand sophrologue à Boisset" class="tapor-logo">
+        <a href="mailto:christapor@gmail.com" class="tapor-link">
+          TaporDigital
+          <img src="logo.png" alt="Logo TaporDigital creation site Katy Lengrand Boisset" class="tapor-logo" style="height:20px; vertical-align:middle;">
         </a>
       </p>
-      <a href="#top" style="color:white; text-decoration:none;">Retour en haut ↑</a>
     </div>
   </footer>
 
@@ -208,9 +152,6 @@
     var links  = document.querySelector('.nav-links');
     if (toggle && links) {
       toggle.addEventListener('click', function() { links.classList.toggle('nav-open'); });
-      document.querySelectorAll('.nav-links a').forEach(function(link) {
-        link.addEventListener('click', function() { links.classList.remove('nav-open'); });
-      });
     }
   </script>
 </body>
