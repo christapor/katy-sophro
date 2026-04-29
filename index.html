@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Sophrologue à Boisset en Haute-Loire | Stress, sommeil, confiance en soi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="description" content="Katy Lengrand, sophrologue certifiée RNCP à Boisset en Haute-Loire. Séances de sophrologie pour stress, sommeil, émotions, confiance en soi, examens et mieux-être.">
   <meta name="keywords" content="sophrologue Boisset, sophrologie Boisset, sophrologue Haute-Loire, sophrologie Haute-Loire, gestion du stress, sommeil, confiance en soi, émotions, préparation examens, sophrologue Retournac, sophrologue Craponne-sur-Arzon, sophrologue Usson-en-Forez, massages énergétiques, Katy Lengrand">
 
@@ -12,12 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
 
+  <style>
+    /* Styles critiques ré-intégrés pour éviter l'effet "page blanche" */
+    .hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 80px 0 40px 0; }
+    @media (max-height: 500px) and (orientation: landscape) {
+      .hero { min-height: auto; padding: 120px 0 60px 0; }
+      .hero-title { font-size: 1.8rem !important; }
+    }
+    .hero-content { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90%; margin: 0 auto; }
+    .hero-title { font-size: clamp(2.2rem, 7vw, 4rem); margin-bottom: 0.3rem; }
+    .hero-subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 5vw, 2.5rem); white-space: nowrap; font-weight: 700; color: #ffffff; margin-bottom: 0.8rem; }
+    .hero-certified { font-size: clamp(0.85rem, 3vw, 1.2rem); font-weight: 600; margin-bottom: 1.2rem; }
+    .hero-quote { font-style: italic; margin-bottom: 1.5rem; max-width: 600px; font-size: 0.95rem; }
+    .btn-primary { display: inline-block; padding: 12px 25px; background-color: #f4a124; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; transition: transform 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Katy Lengrand - Sophrologue à Boisset",
-    "description": "Katy Lengrand, sophrologue certifiée RNCP à Boisset. Accompagnement en gestion du stress, sommeil, émotions et confiance en soi. Séances à Boisset, Retournac, Craponne-sur-Arzon et Usson-en-Forez.",
     "url": "https://www.katymieuxetre.fr/",
     "telephone": "+33684681187",
     "aggregateRating": {
@@ -32,18 +45,7 @@
       "postalCode": "43500",
       "addressRegion": "Auvergne-Rhône-Alpes",
       "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 45.3238,
-      "longitude": 3.9829
-    },
-    "areaServed": [
-      {"@type": "City", "name": "Boisset"},
-      {"@type": "City", "name": "Retournac"},
-      {"@type": "City", "name": "Craponne-sur-Arzon"},
-      {"@type": "City", "name": "Usson-en-Forez"}
-    ]
+    }
   }
   </script>
 </head>
@@ -142,22 +144,19 @@
             <p class="review-text">"Quelle belle découverte ! La sophrologie avec Katy, des instants précieux qui m'ont permis de passer des étapes cruciales de la vie... Grâce à ses séances, j'ai appris à gérer mon stress, mes émotions, et même mes douleurs."</p>
             <p class="review-author">Claire Lecampion</p>
           </article>
-
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Depuis longtemps à la recherche d'une méthode efficace pour gérer un stress toxique et persistant, ma rencontre avec Katy a tout changé. Je la conseille vivement pour son écoute et sa bienveillance."</p>
+            <p class="review-text">"Depuis longtemps à la recherche d'une méthode efficace pour gérer un stress toxique, ma rencontre avec Katy a tout changé. Je la conseille vivement."</p>
             <p class="review-author">Marie-line Mestrallet</p>
           </article>
-
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Les mains de fée avec les huiles essentielles : une détente sans pareil. Un moment de relaxation absolue."</p>
+            <p class="review-text">"Les mains de fée avec les huiles essentielles : une détente sans pareil. Un pur moment de relaxation."</p>
             <p class="review-author">Arabella Dommeyer</p>
           </article>
-
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Un massage bienfaisant par des mains en or. On ressort totalement apaisé et revitalisé."</p>
+            <p class="review-text">"Un massage bienfaisant par des mains en or. On ressort totalement apaisé."</p>
             <p class="review-author">Barbara Duthaler</p>
           </article>
         </div>
