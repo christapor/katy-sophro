@@ -12,47 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <style>
-    .hero { 
-      min-height: 60vh; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      padding: 80px 0 40px 0; 
-    }
-    /* Correction mode paysage mobile */
-    @media (max-height: 500px) and (orientation: landscape) {
-      .hero { min-height: auto; padding: 120px 0 60px 0; }
-      .hero-title { font-size: 1.8rem !important; }
-    }
-    .hero-content { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90%; margin: 0 auto; }
-    .hero-title { font-size: clamp(2.2rem, 7vw, 4rem); margin-bottom: 0.3rem; }
-    .hero-subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 5vw, 2.5rem); white-space: nowrap; font-weight: 700; color: #ffffff; margin-bottom: 0.8rem; }
-    .hero-certified { font-size: clamp(0.85rem, 3vw, 1.2rem); font-weight: 600; margin-bottom: 1.2rem; }
-    .hero-quote { font-style: italic; margin-bottom: 1.5rem; max-width: 600px; font-size: 0.95rem; }
-    .btn-primary { display: inline-block; padding: 12px 25px; background-color: #f4a124; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; transition: transform 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-    .section-sophro { padding-top: 40px !important; }
-    .card-title { font-size: 1.4rem; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; text-align: center; }
-
-    /* Styles pour la section Avis */
-    .section-reviews { background-color: #f9fbf9; }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-    .review-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid #f4a124; }
-    .review-stars { color: #f4a124; font-size: 1.1rem; margin-bottom: 10px; }
-    .review-text { font-style: italic; color: #444; line-height: 1.6; margin-bottom: 15px; font-size: 0.95rem; }
-    .review-author { font-weight: 700; color: var(--primary); font-family: 'Playfair Display', serif; }
-    .review-date { font-size: 0.8rem; color: #888; }
-    .google-badge { text-align: center; margin-top: 40px; }
-    .btn-google { color: #555; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ccc; padding-bottom: 2px; transition: color 0.3s; }
-    .btn-google:hover { color: #f4a124; border-color: #f4a124; }
-  </style>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Katy Lengrand - Sophrologue à Boisset",
-    "description": "Katy Lengrand, sophrologue certifiée RNCP à Boisset. Accompagnement en gestion du stress, sommeil, émotions et confiance en soi.",
+    "description": "Katy Lengrand, sophrologue certifiée RNCP à Boisset. Accompagnement en gestion du stress, sommeil, émotions et confiance en soi. Séances à Boisset, Retournac, Craponne-sur-Arzon et Usson-en-Forez.",
     "url": "https://www.katymieuxetre.fr/",
     "telephone": "+33684681187",
     "aggregateRating": {
@@ -110,29 +75,31 @@
 
   <main>
     <section id="sophrologie" class="section section-sophro">
-      <div class="container sophro-grid">
-        <div>
-          <h2>Séance de sophrologie à Boisset, Retournac, Craponne-sur-Arzon et Usson-en-Forez</h2>
-          <p>La sophrologie est une méthode psycho-corporelle qui associe respiration, détente musculaire et visualisation positive. Elle aide à mieux gérer le stress, améliorer le sommeil, renforcer la confiance en soi et retrouver un équilibre durable.</p>
-          <p>Installée à Boisset, en Haute-Loire, Katy Lengrand accompagne les adultes, les adolescents et les enfants dès 5 ans. Les séances s’adressent aux personnes de Boisset et des communes voisines comme Retournac, Craponne-sur-Arzon, Usson-en-Forez et les alentours.</p>
-        </div>
-        <div>
-          <h3>Accompagnement stress, émotions et anxiété</h3>
-          <ul class="bullet-list">
-            <li>Apprendre à mieux gérer le stress au quotidien</li>
-            <li>Accueillir et réguler les émotions</li>
-            <li>Retrouver calme, sérénité et confiance en soi</li>
-            <li>Préparer un examen, un changement ou une étape de vie</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Sophrologie pour le sommeil et la détente corporelle</h3>
-          <ul class="bullet-list">
-            <li>Améliorer la qualité du sommeil</li>
-            <li>Relâcher les douleurs et tensions corporelles</li>
-            <li>Séances individuelles en cabinet à Boisset</li>
-            <li>Séances à domicile autour de Retournac, Craponne-sur-Arzon et Usson-en-Forez</li>
-          </ul>
+      <div class="container">
+        <h2>Séance de sophrologie à Boisset, Retournac, Craponne-sur-Arzon et Usson-en-Forez</h2>
+        <div class="sophro-grid">
+          <div>
+            <p>La sophrologie est une méthode psycho-corporelle qui associe respiration, détente musculaire et visualisation positive. Elle aide à mieux gérer le stress, améliorer le sommeil, renforcer la confiance en soi et retrouver un équilibre durable.</p>
+            <p>Installée à Boisset, en Haute-Loire, Katy Lengrand accompagne les adultes, les adolescents et les enfants dès 5 ans. Les séances s’adressent aux personnes de Boisset et des communes voisines comme Retournac, Craponne-sur-Arzon, Usson-en-Forez et les alentours.</p>
+          </div>
+          <div>
+            <h3>Accompagnement stress, émotions et anxiété</h3>
+            <ul class="bullet-list">
+              <li>Apprendre à mieux gérer le stress au quotidien</li>
+              <li>Accueillir et réguler les émotions</li>
+              <li>Retrouver calme, sérénité et confiance en soi</li>
+              <li>Préparer un examen, un changement ou une étape de vie</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Sophrologie pour le sommeil et la détente corporelle</h3>
+            <ul class="bullet-list">
+              <li>Améliorer la qualité du sommeil</li>
+              <li>Relâcher les douleurs et tensions corporelles</li>
+              <li>Séances individuelles en cabinet à Boisset</li>
+              <li>Séances à domicile autour de Retournac, Craponne-sur-Arzon et Usson-en-Forez</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -142,23 +109,23 @@
         <h2>Séance de sophrologie, accompagnement stress et massages bien-être en Haute-Loire</h2>
         <div class="cards">
           <article class="card">
-            <p class="card-title">Sophrologie individuelle en cabinet</p>
+            <h3 class="card-title">Sophrologie individuelle en cabinet</h3>
             <p class="card-subtitle">À Boisset</p>
             <div class="card-tarif"><span class="tarif-label">Adulte</span><span class="card-price">60€</span></div>
             <div class="card-tarif"><span class="tarif-label">Enfant / Ado (-16 ans)</span><span class="card-price">45€</span></div>
           </article>
           <article class="card">
-            <p class="card-title">Sophrologie à domicile</p>
+            <h3 class="card-title">Sophrologie à domicile</h3>
             <div class="card-tarif"><span class="tarif-label">Adulte</span><span class="card-price">70€</span></div>
             <div class="card-tarif"><span class="tarif-label">Enfant / Ado (-16 ans)</span><span class="card-price">55€</span></div>
           </article>
           <article class="card">
-            <p class="card-title">Ateliers de sophrologie en groupe</p>
+            <h3 class="card-title">Ateliers de sophrologie en groupe</h3>
             <p class="card-price">12€ / pers</p>
             <p>Des séances collectives pour découvrir la sophrologie et partager un moment de mieux-être.</p>
           </article>
           <article class="card">
-            <p class="card-title">Massages relaxants et énergétiques</p>
+            <h3 class="card-title">Massages relaxants et énergétiques</h3>
             <p class="card-price">Sur mesure</p>
             <p>Des massages intuitifs adaptés à vos besoins pour favoriser le lâcher-prise.</p>
           </article>
@@ -174,32 +141,28 @@
             <div class="review-stars">★★★★★</div>
             <p class="review-text">"Quelle belle découverte ! La sophrologie avec Katy, des instants précieux qui m'ont permis de passer des étapes cruciales de la vie... Grâce à ses séances, j'ai appris à gérer mon stress, mes émotions, et même mes douleurs."</p>
             <p class="review-author">Claire Lecampion</p>
-            <p class="review-date">Février 2021</p>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">"Depuis longtemps à la recherche d'une méthode efficace pour gérer un stress toxique et persistant, ma rencontre avec Katy a tout changé. Je la conseille vivement pour son écoute et sa bienveillance."</p>
-            <p class="review-author">Marie-Line Mestrallet</p>
-            <p class="review-date">Juillet 2021</p>
+            <p class="review-author">Marie-line Mestrallet</p>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">"Les mains de fée avec les huiles essentielles : une détente sans pareil. Un moment de relaxation absolue."</p>
             <p class="review-author">Arabella Dommeyer</p>
-            <p class="review-date">Janvier 2022</p>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Un massage bienfaisant par des mains en or. On ressort apaisé et revitalisé."</p>
+            <p class="review-text">"Un massage bienfaisant par des mains en or. On ressort totalement apaisé et revitalisé."</p>
             <p class="review-author">Barbara Duthaler</p>
-            <p class="review-date">Décembre 2021</p>
           </article>
         </div>
         <div class="google-badge">
-          <a href="https://www.google.com/search?q=katy+lengrand+boisset+avis" target="_blank" class="btn-google">Voir tous les avis sur Google</a>
+          <a href="https://www.google.com/search?q=katy+lengrand+boisset+avis" target="_blank">Voir tous les avis sur Google →</a>
         </div>
       </div>
     </section>
