@@ -36,3 +36,24 @@
   font-weight: 600;
   font-size: 0.9rem;
 }
+
+/* Garde TOUT ton contenu précédent et AJOUTE ça à la fin */
+
+.section-reviews { background: rgba(13,110,117,0.98); }
+.reviews-grid { display: grid; gap: 2rem; margin-top: 3rem; }
+@media (min-width: 768px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.review-card { 
+  background: var(--white); 
+  color: var(--text-dark); 
+  padding: 2rem; 
+  border-radius: 20px; 
+  box-shadow: var(--shadow);
+  text-shadow: none;
+  border-left: 6px solid var(--accent);
+}
+
+.review-stars { color: var(--accent); font-size: 1.2rem; margin-bottom: 0.8rem; }
+.review-text { font-style: italic; line-height: 1.6; margin-bottom: 1rem; color: #334e4f; }
+.review-author { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--bg-dark); }
+.google-badge { text-align: center; margin-top: 2rem; }
