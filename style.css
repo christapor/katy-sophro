@@ -1,470 +1,245 @@
 /* =========================================
-
    1. VARIABLES & RESET 
-
    ========================================= */
-
 :root {
-
   --bg-dark: #0d6e75;
-
   --bg-light: #1a9199;
-
   --accent: #f4c967;
-
   --white: #ffffff;
-
   --text-main: #eaf7f8;
-
   --text-dark: #123132;
-
   --card-bg: #ffffff;
-
   --shadow: 0 10px 30px rgba(0,0,0,0.3);
-
   --nav-h: 75px;
-
 }
-
-
 
 *, *::before, *::after { box-sizing: border-box; }
 
-
-
 body {
-
   margin: 0;
-
   font-family: 'Montserrat', sans-serif;
-
   color: var(--text-main);
-
   background-color: var(--bg-dark);
-
 }
-
-
 
 /* IMAGE DE FOND FILIGRANE (body::before)
-
    MODIFICATION MAJEURE : Opacité réduite à 0.35 pour garantir la lisibilité
-
    ========================================================================= */
-
 body::before {
-
   content: "";
-
   position: fixed;
-
   top: 50%; left: 50%;
-
   transform: translate(-50%, -50%);
-
   width: 100vmax; height: 100vmax;
-
   background: url("image1.png") center/cover no-repeat;
-
   /* MODIFICATION : On la rend beaucoup plus discrète (avant 0.70) */
-
   opacity: 0.35; 
-
   pointer-events: none;
-
   z-index: 0;
-
 }
-
-
 
 .container {
-
   width: 100%; max-width: 1100px;
-
   margin: 0 auto; padding: 0 1.5rem;
-
   position: relative; z-index: 1;
-
   /* LISIBILITÉ : Ombre portée pour bien découper le texte */
-
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-
 }
-
 .section { padding: 5rem 0; }
 
-
-
 /* NAVBAR */
-
 .navbar {
-
   position: fixed; top: 0; left: 0; width: 100%;
-
   height: var(--nav-h); z-index: 1000;
-
   /* Fond presque opaque pour la lisibilité du menu mobile */
-
   background: rgba(10,90,96,0.99);
-
   backdrop-filter: blur(15px);
-
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-
 }
-
 .nav-inner {
-
   display: flex; align-items: center; justify-content: flex-end;
-
   height: var(--nav-h);
-
 }
-
 .nav-links { display: flex; list-style: none; gap: 2.5rem; margin: 0; padding: 0; }
-
 .nav-links a { 
-
   color: var(--white); 
-
   text-decoration: none; 
-
   font-weight: 600; 
-
   letter-spacing: 0.05em;
-
   text-shadow: none;
-
 }
-
 .nav-links a:hover { color: var(--accent); }
 
-
-
 .nav-toggle {
-
   display: none; font-size: 2.2rem; border: none;
-
   background: none; color: var(--accent); cursor: pointer;
-
 }
-
-
 
 /* HERO - CORRECTION PC */
-
 .hero {
-
   position: relative; 
-
   padding-top: var(--nav-h);
-
   min-height: 50vh;
-
   background: url("image.jpg") center/cover no-repeat fixed;
-
   color: var(--white); overflow: hidden;
-
 }
-
 .hero-overlay {
-
   position: absolute; inset: 0;
-
   background: linear-gradient(120deg, rgba(10,90,96,0.92), rgba(20,140,148,0.8));
-
 }
-
 .hero-content {
-
   position: relative; 
-
   min-height: calc(50vh - var(--nav-h));
-
   display: flex; flex-direction: column; justify-content: center;
-
   max-width: 850px; z-index: 2; 
-
   padding: 5rem 0 3rem; /* Suffisant pour que Katy Lengrand ne touche plus le menu sur PC */
-
 }
-
 .hero-title { 
-
   font-family: 'Playfair Display', serif; 
-
   font-size: clamp(2.8rem, 7vw, 5rem); 
-
   margin: 0; 
-
   text-shadow: 0 4px 10px rgba(0,0,0,0.7);
-
 }
-
 .hero-certified { 
-
   font-size: 1.3rem; text-transform: uppercase; color: #b8e8ea; 
-
   margin: 0.5rem 0 0.2rem; letter-spacing: 0.1em;
-
 }
-
 .hero-massages { 
-
   font-size: 1.5rem; text-transform: uppercase; color: var(--accent); 
-
   margin-bottom: 1.5rem; letter-spacing: 0.2em; font-weight: 600;
-
 }
-
 .hero-quote { font-style: italic; font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95; }
 
-
-
 /* BOUTONS */
-
 .btn {
-
   display: inline-block; padding: 0.9rem 2rem; border-radius: 999px;
-
   font-weight: 700; text-decoration: none; transition: 0.3s; cursor: pointer; border: none;
-
   text-shadow: none;
-
 }
-
 .btn-primary { background: var(--accent); color: #123132; box-shadow: var(--shadow); }
-
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
 
-
-
 /* SECTIONS - LISIBILITÉ AMÉLIORÉE 
-
    Réglages maintenus pour créer un fond uni
-
    ================================================ */
-
 .section-sophro, .section-contact { background: rgba(13,110,117,0.96); }
-
 .section-prestations { background: rgba(26,145,153,0.96); }
 
-
-
 .section-sophro h2, .section-prestations h2, .section-contact h2 {
-
   font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 0; 
-
   color: var(--white);
-
   text-shadow: 0 2px 4px rgba(0,0,0,0.7);
-
 }
-
 .section-sophro h3 { color: var(--accent); font-size: 1.3rem; margin-top: 2rem; }
 
-
-
 .bullet-list { list-style: none; padding: 0; }
-
 .bullet-list li { margin-bottom: 0.8rem; line-height: 1.5; color: #d8f4f5; }
-
 .bullet-list li::before { content: "•"; color: var(--accent); margin-right: 0.7rem; font-weight: bold; }
 
-
-
 .sophro-grid { display: grid; gap: 3rem; }
-
 @media (min-width: 768px) { .sophro-grid { grid-template-columns: 1.2fr 1fr 1fr; } }
 
-
-
 /* CARTES - ESPACEMENT (Inchangé)
-
    ============================== */
-
 .cards { 
-
   display: flex; 
-
   flex-wrap: wrap; 
-
   gap: 2.5rem; /* Espace généreux entre les cartes (Gap) */
-
   justify-content: center; 
-
   margin-top: 3rem; 
-
 }
-
 .card {
-
   background: var(--white); color: var(--text-dark);
-
   border-radius: 20px; 
-
   padding: 2.2rem; /* Plus de padding interne */
-
   flex: 1 1 260px; /* Base un peu plus large */
-
   max-width: 300px;
-
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-
   text-shadow: none; /* Crucial pour le texte sombre sur fond blanc */
-
   transition: transform 0.3s ease;
-
 }
-
 .card:hover { transform: translateY(-5px); }
 
-
-
 .card h3 { margin-top: 0; color: #0a5a60; font-size: 1.5rem; margin-bottom: 0.5rem; }
-
 .card-subtitle { margin-top: 0; font-size: 0.95rem; color: #577273; margin-bottom: 1rem; }
-
 .card-price { font-weight: 800; font-size: 1.6rem; color: #1a9199; margin: 0.5rem 0; display: block; }
-
 .card-tarif { 
-
   display: flex; 
-
   justify-content: space-between; 
-
   align-items: baseline;
-
   border-bottom: 1px solid #eee; 
-
   padding: 0.6rem 0; 
-
 }
-
 .card-tarif:last-of-type { border-bottom: none; }
-
 .tarif-label { font-size: 1rem; color: #3d6e70; }
 
-
-
 /* FOOTER */
-
 .footer { background: #074a50; padding: 2.5rem 0; font-size: 0.95rem; text-shadow: none; position: relative; z-index: 1; }
-
 .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-
 .footer a { color: var(--accent); text-decoration: none; }
-
 .tapor-logo { height: 50px; margin-left: 12px; transition: 0.8s; vertical-align: middle; }
-
 .tapor-link:hover .tapor-logo { transform: scale(1.8) rotate(360deg); }
 
-
-
 /* MOBILE - XIAOMI 14T PRO */
-
 @media (max-width: 767px) {
-
   .hero { min-height: 45vh; }
-
   
-
   .hero-content { 
-
     padding-top: 6rem; 
-
     text-align: center; 
-
     min-height: calc(45vh - var(--nav-h));
-
   }
-
-
 
   /* RE-AJOUT DE LA CITATION POUR MOBILE */
-
   .hero-quote { 
-
     white-space: normal !important; /* Permet le retour à la ligne */
-
     font-size: 0.95rem; 
-
     line-height: 1.5;
-
     margin: 0 auto 2.5rem;
-
     max-width: 90%; /* Pour laisser une petite marge sur les côtés */
-
     display: block;
-
   }
-
-
 
   .nav-toggle { display: block; }
-
   
-
   .nav-links {
-
     position: fixed; top: var(--nav-h); left: 0; width: 100%;
-
     flex-direction: column; background: #0a5a60;
-
     max-height: 0; overflow: hidden; transition: 0.4s;
-
     text-shadow: none;
-
   }
-
   
-
   .nav-links.nav-open { max-height: 350px; padding: 2rem; border-bottom: 3px solid var(--accent); }
-
   
-
   .nav-links a { 
-
     color: white !important; 
-
     font-size: 1.3rem; 
-
     padding: 0.8rem 0; 
-
     display: block; 
-
   }
-
   
-
   .cards { gap: 1.5rem; } 
-
   .card { padding: 1.8rem; }
-
   
-
   .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
-
 }
-
 /* Modification de la couleur des liens de contact uniquement */
-
 footer a, a[href^="tel:"], a[href^="mailto:"] {
-
   color: #e9c46a !important;
-
   text-decoration: none !important;
-
 }
-
-
 
 /* Garde la couleur même après avoir cliqué */
-
 footer a:visited, a[href^="tel:"]:visited, a[href^="mailto:"]:visited {
-
   color: #e9c46a !important;
-
 }
 
+/* =========================================
+   AJOUT POUR LA SECTION AVIS
+   ========================================= */
+.section-avis { background: rgba(13,110,117,0.96); } /* Garde l'alternance avec .section-prestations */
+.section-avis h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 0; color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.7); text-align: center; }
+.section-avis .card { display: flex; flex-direction: column; }
+.card-stars { color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem; text-align: center; letter-spacing: 2px; }
+.card-quote { font-style: italic; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; color: #123132; }
+.card-author { font-weight: 700; color: #0a5a60; text-align: right; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-top: auto; }
