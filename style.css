@@ -37,23 +37,16 @@
   font-size: 0.9rem;
 }
 
-/* Garde TOUT ton contenu précédent et AJOUTE ça à la fin */
+/* CONSERVE TOUT TON CODE D'ORIGINE ET AJOUTE JUSTE CECI À LA FIN */
 
-.section-reviews { background: rgba(13,110,117,0.98); }
-.reviews-grid { display: grid; gap: 2rem; margin-top: 3rem; }
-@media (min-width: 768px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+.section-avis { background: rgba(26,145,153,0.96); } /* Même fond que prestations pour l'unité */
 
-.review-card { 
-  background: var(--white); 
-  color: var(--text-dark); 
-  padding: 2rem; 
-  border-radius: 20px; 
-  box-shadow: var(--shadow);
-  text-shadow: none;
-  border-left: 6px solid var(--accent);
+.card-stars { color: var(--accent); font-size: 1.2rem; margin-bottom: 0.5rem; text-align: center; }
+
+.card-author { 
+  margin-top: 1rem; 
+  font-weight: 700; 
+  color: #0a5a60; 
+  text-align: right; 
+  font-family: 'Playfair Display', serif; 
 }
-
-.review-stars { color: var(--accent); font-size: 1.2rem; margin-bottom: 0.8rem; }
-.review-text { font-style: italic; line-height: 1.6; margin-bottom: 1rem; color: #334e4f; }
-.review-author { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--bg-dark); }
-.google-badge { text-align: center; margin-top: 2rem; }
